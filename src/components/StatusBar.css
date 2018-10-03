@@ -4,6 +4,10 @@
     background-color: bisque;
     margin-top: 0;
 }
+
+#status-bar p {
+    color: red;
+}
 ul {
     list-style: none;
 }

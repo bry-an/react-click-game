@@ -10,7 +10,8 @@ class App extends Component {
     clickedImageIds: [],
     score: 0,
     highScore: 0,
-    scoreColor: '#222' 
+    scoreColor: '#222',
+    msg: ''
   };
 
 
@@ -18,10 +19,11 @@ class App extends Component {
     this.state.clickedImageIds.includes(id)
       ? this.gameOver(id)
       : this.setState({
-          clickedImageIds: [...this.state.clickedImageIds, id],
-          score: this.state.score + 1,
-          randomImages: this.shuffleArray(this.state.randomImages)
-        }, () => this.updateHighScore(this.state.score));
+        msg: '',
+        clickedImageIds: [...this.state.clickedImageIds, id],
+        score: this.state.score + 1,
+        randomImages: this.shuffleArray(this.state.randomImages)
+      }, () => this.updateHighScore(this.state.score));
   };
 
   shuffleArray = array => {
@@ -37,8 +39,10 @@ class App extends Component {
   gameOver = () => {
     this.setState({
       clickedImageIds: [],
-      score: 0
+      score: 0,
+      msg: 'You already clicked that one! Click an image to play again.'
     });
+
   };
 
   updateHighScore = score => {
@@ -47,16 +51,22 @@ class App extends Component {
         highScore: this.state.score
       });
     }
+    if (score === 12) {
+      this.setState({
+        msg: 'You got all 12! Nice job!'
+      })
+    }
   };
 
   render() {
     return (
       <div className="App">
-        <StatusBar 
-          score={this.state.score} 
+        <StatusBar
+          score={this.state.score}
           highScore={this.state.highScore}
           color={this.state.scoreColor}
-          />
+          msg={this.state.msg}
+        />
         <div className="images">
           {this.state.randomImages.map(chemical => {
             return (

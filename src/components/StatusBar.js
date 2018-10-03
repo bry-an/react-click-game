@@ -10,11 +10,12 @@ const StatusBar = props => {
   <div id="status-bar" >
   <ul id= 'scores-list'>
       <li>
-          <span style = {divStyle}> Score <span style id='score'>{props.score}</span></span>
+          Score <span id='score'>{props.score}</span>
       </li>
       <li>
           High Score <span id='high-score-text'>{props.highScore}</span>
       </li>
+      <p>{props.msg}</p>
   </ul>
   </div>
 
