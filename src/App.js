@@ -9,13 +9,12 @@ class App extends Component {
     randomImages: chemicals,
     clickedImageIds: [],
     score: 0,
-    highScore: 0
+    highScore: 0,
+    scoreColor: '#222' 
   };
 
 
   pictureClickHandler = id => {
-    console.log("clickey");
-
     this.state.clickedImageIds.includes(id)
       ? this.gameOver(id)
       : this.setState({
@@ -35,7 +34,7 @@ class App extends Component {
     }
     return array;
   };
-  gameOver = id => {
+  gameOver = () => {
     this.setState({
       clickedImageIds: [],
       score: 0
@@ -43,7 +42,6 @@ class App extends Component {
   };
 
   updateHighScore = score => {
-    console.log('score', score)
     if (score > this.state.highScore) {
       this.setState({
         highScore: this.state.score
@@ -57,6 +55,7 @@ class App extends Component {
         <StatusBar 
           score={this.state.score} 
           highScore={this.state.highScore}
+          color={this.state.scoreColor}
           />
         <div className="images">
           {this.state.randomImages.map(chemical => {
