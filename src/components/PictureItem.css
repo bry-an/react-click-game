@@ -1,0 +1,23 @@
+
+.images {
+    width: 80%;
+    margin: auto;
+    background-color: white
+}
+.clicky-image {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 4px solid lightblue;
+    border-radius: 3px;
+    z-index: 1
+}
+
+.clicky-image:hover {
+    position: relative;
+    width: 220px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    z-index: 50
+}
