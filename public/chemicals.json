@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1, 
+        "url": "../public/images/3-aminobenzamide.png"
+    },
+    {
+        "id": 2, 
+        "url": "../public/images/aminopterin.png"
+    },
+    {
+        "id": 3, 
+        "url": "../public/images/bensulide.png"
+    },
+    {
+        "id": 4, 
+        "url": "../public/images/caffeine.png"
+    },
+    {
+        "id": 5, 
+        "url": "../public/images/carboxylic-acid.png"
+    },
+    {
+        "id": 6, 
+        "url": "../public/images/cholesterol-sulfate.png"
+    },
+    {
+        "id": 7, 
+        "url": "../public/images/dopamine-hydrochloride.png"
+    },
+    {
+        "id": 8, 
+        "url": "../public/images/dronabinol.png"
+    },
+    {
+        "id": 9, 
+        "url": "../public/images/ethyl-vinyl-ketone.png"
+    },
+    {
+        "id": 10, 
+        "url": "../public/images/m-trifluromethyl-cinnamic-acid.png"
+    },
+    {
+        "id": 11, 
+        "url": "../public/images/triisopropylsilyl-acetylene.png"
+    },
+    {
+        "id": 12, 
+        "url": "../public/images/ureidoacrylate-peracid.png"
+    }
+]
