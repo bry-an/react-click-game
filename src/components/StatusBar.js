@@ -2,20 +2,22 @@ import React from "react";
 import "./StatusBar.css";
 
 const StatusBar = props => {
-    const divStyle = {
-        color: props.color
-    }
   return (
       
   <div id="status-bar" >
+  <div id='chem-clickey'>
+  Chemistry Clickey
+  </div>
+  <div id='status-msg'>
+      {props.msg || (12 - props.score) + ' molecules left'}
+      </div>
   <ul id= 'scores-list'>
       <li>
-          Score <span id='score'>{props.score}</span>
+          Score <span id='score-text'>{props.score}</span>
       </li>
       <li>
           High Score <span id='high-score-text'>{props.highScore}</span>
       </li>
-      <p>{props.msg}</p>
   </ul>
   </div>
 

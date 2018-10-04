@@ -1,33 +1,63 @@
 #status-bar {
-    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
     width: 100%;
-    background-color: bisque;
+    background-color: lightblue;
     margin-top: 0;
+    color: #222;
+    overflow: auto;
+    clear: both;
 }
 
-#status-bar p {
-    color: red;
+
+#chem-clickey {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#status-msg {
+    font-size: 2rem;
+
 }
 ul {
     list-style: none;
 }
 
 #scores-list {
+    display: inline-flex;
     color: #222;
     font-size: 2rem;
+    margin-top: 5px;
+    padding-left: 0
 }
 
-#score {
+#score-text {
     font-weight: bold;
     font-size: 2rem;
     color: #222;
+    padding-right: 10px;
 }
 
 #high-score-text {
     font-weight: bold;
     font-size: 2rem;
     color: #222;
+    margin-right: 15px;
 }
+@media (max-width: 1050px) {
+    #status-msg {
+        font-size: 1.5rem;
+    }
+
+    #score-text, #high-score-text, #scores-list, #chem-clickey {
+        font-size: 1.5rem;
+    }
+}
+
+
 
 
 
